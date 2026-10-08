@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kestrel-relay
+  namespace: kestrel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kestrel-relay
+  template:
+    metadata:
+      labels:
+        app: kestrel-relay
+    spec:
+      containers:
+        - name: kestreld
+          image: kestrel-relay:dev
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7777

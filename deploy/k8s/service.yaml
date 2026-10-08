@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kestrel-relay
+  namespace: kestrel
+spec:
+  selector:
+    app: kestrel-relay
+  ports:
+    - port: 7777
+      targetPort: 7777

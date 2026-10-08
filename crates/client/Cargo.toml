@@ -1,0 +1,9 @@
+[package]
+name = "kestrel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+kestrel-crypto = { path = "../crypto" }
+hkdf = "0.12"
+sha2 = "0.10"

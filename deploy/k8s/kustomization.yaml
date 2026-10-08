@@ -1,0 +1,5 @@
+resources:
+  - namespace.yaml
+  - allow.yaml
+  - deployment.yaml
+  - service.yaml
